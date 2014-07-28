@@ -3,11 +3,12 @@
 set -e
 
 mode=$1
-rspec_options=$2
+api=$2
+rspec_options=$3
 
-if [ $# -eq 0 ] || ([ "$mode" != "online" ] && [ "$mode" != "offline" ]); then
+if [ $# -lt 2 ] || ([ "$mode" != "online" ] && [ "$mode" != "offline" ]); then
   echo "Usage:"
-  echo "  ./buildpack-build online|offline [rspec options]"
+  echo "  ./buildpack-build online|offline api_url [rspec options]"
   exit 1
 fi
 
@@ -17,10 +18,8 @@ then
 fi
 
 if [ "$mode" == "online" ]; then
-  api=api.10.244.0.34.xip.io
   export VAGRANT_CWD="$HOME/workspace/bosh-lite"
 else
-  api=api.10.245.0.34.xip.io
   export VAGRANT_CWD="$HOME/workspace/bosh-lite-2nd-instance"
 fi
 
