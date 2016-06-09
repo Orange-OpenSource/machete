@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    machete (0.0.1)
+    machete (0.0.2)
       httparty
       rspec
 
@@ -9,23 +9,24 @@ GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.5)
-    httparty (0.13.1)
+    httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
-    json (1.8.1)
+    json (1.8.3)
     multi_xml (0.5.5)
-    rspec (3.0.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
-    rspec-core (3.0.0)
-      rspec-support (~> 3.0.0)
-    rspec-expectations (3.0.0)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
+    rspec-core (3.4.4)
+      rspec-support (~> 3.4.0)
+    rspec-expectations (3.4.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.0.0)
-    rspec-mocks (3.0.1)
-      rspec-support (~> 3.0.0)
-    rspec-support (3.0.0)
+      rspec-support (~> 3.4.0)
+    rspec-mocks (3.4.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.4.0)
+    rspec-support (3.4.1)
 
 PLATFORMS
   ruby
@@ -33,3 +34,6 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.6)
   machete!
+
+BUNDLED WITH
+   1.12.5
